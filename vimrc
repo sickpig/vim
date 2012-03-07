@@ -18,6 +18,23 @@ colorscheme solarized
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" The current buffer can be put to the background without writing to disk
+" reload marks and undo history of background buffer becomes current again
+set hidden
+set history=500 " boost history buffer
+
+" make cmpletion more bash / dash like
+set wildmenu
+set wildmode=list:longest,full
+
+" viewport related
+set scrolloff=3
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+" centralized swp files
+set directory=~/.vim/tmp
+
 " Make NerdTree persistent across tabs 
 " you need :NERDTreeTabsToggle to activate 
 " NERD panel in all tabs (see :help leader
@@ -43,6 +60,10 @@ set statusline=%r%t%m\ \Buffer:\ %n\ %=Line\ %l/%L\ \ Col:\ %c\ (%p%%)\ [%{strft
 
 " enable line numbering an all files 
 set number
+set showmatch " Show matching brackets.
+set smartcase " Case insensitive searches become sensitive with capitals
+
+" Remapping
 
 " disable arrow keys
 inoremap  <Up>     <NOP>
