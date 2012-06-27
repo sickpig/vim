@@ -14,6 +14,8 @@ Configuration
 
 and now celebrate ;) 
 
-once you need to update all submodules just issue: 
+if you plan to add new plugins just add new submodule
+to your local repo, then if you need to update those 
+(custom) submodules just issue:
 
 	git submodule foreach git pull origin master

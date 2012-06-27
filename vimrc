@@ -83,7 +83,8 @@ filetype plugin indent on
 augroup myfiletypes
   " Clear old autocmds in group  
   " autocmd!
-  autocmd FileType tcl set is tw=0 si ai sta sw=4 ts=4 | set list! | set list listchars=trail:.,tab:\ \ ,eol:¬ 
+  autocmd FileType tcl  setlocal is tw=0 si ai sta sw=4 ts=4 | set list! | set list listchars=trail:.,tab:\ \ ,eol:¬ 
+  autocmd FileType ruby setlocal softtabstop=2 expandtab sw=2 ts=2 | set list! | set list listchars=trail:.,tab:\ \ ,eol:¬ 
   autocmd BufRead,BufNewFile psql.edit.*  set filetype=sql
   autocmd BufRead,BufNewFile *.sps  set filetype=sps
   autocmd BufRead,BufNewFile *.bla set filetype=logtalk | set list listchars=tab:>.,trail:. ai sw=2 sts=2 et 
