@@ -8,12 +8,20 @@ set backspace=indent,eol,start
 " Switch syntax highlighting on
 syntax on
 
+" encondig guys
+set encoding=utf-8
+set t_Co=256 
+
 " Pathogen: runtime path manipulation
 call pathogen#infect()
 
 " solarized theme
 set background=dark
 colorscheme solarized
+
+" TN theme 
+"set background=light
+"colorscheme Tomorrow-Night
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -65,6 +73,14 @@ set smartcase " Case insensitive searches become sensitive with capitals
 
 " Remapping
 
+" map tab navigation
+nnoremap  <C-l> :tabn<CR>
+nnoremap  <C-h> :tabp<CR>
+
+" map PageUp PageDown 
+nnoremap  <C-k> <PageUp>
+nnoremap  <C-j> <PageDown>
+
 " disable arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -85,6 +101,7 @@ augroup myfiletypes
   " autocmd!
   autocmd FileType tcl  setlocal is tw=0 si ai sta sw=4 ts=4 | set list! | set list listchars=trail:.,tab:\ \ ,eol:¬ 
   autocmd FileType ruby setlocal softtabstop=2 expandtab sw=2 ts=2 | set list! | set list listchars=trail:.,tab:\ \ ,eol:¬ 
+  autocmd FileType javascript setlocal softtabstop=2 expandtab sw=2 ts=2 | set list! | set list listchars=trail:.,tab:.>,eol:¬ 
   autocmd BufRead,BufNewFile psql.edit.*  set filetype=sql
   autocmd BufRead,BufNewFile *.sps  set filetype=sps
   autocmd BufRead,BufNewFile *.bla set filetype=logtalk | set list listchars=tab:>.,trail:. ai sw=2 sts=2 et 
