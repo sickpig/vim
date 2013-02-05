@@ -1,0 +1,1 @@
+../ext_colors/vim/colors/Tomorrow-Night-Bright.vim
