@@ -25,3 +25,6 @@
 [submodule "vim/ext_colors/iawriter"]
 	path = vim/ext_colors/iawriter
 	url = https://github.com/jacekd/vim-iawriter.git
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
