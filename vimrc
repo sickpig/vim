@@ -100,6 +100,7 @@ augroup myfiletypes
   " Clear old autocmds in group  
   " autocmd!
   autocmd FileType tcl  setlocal is tw=0 si ai sta sw=4 ts=4 | set list! | set list listchars=trail:.,tab:\ \ ,eol:¬ 
+  autocmd Filetype html,xml,xsl,erb source ~/.vim/scripts/closetag.vim 
   autocmd FileType ruby setlocal softtabstop=2 expandtab sw=2 ts=2 | set list! | set list listchars=trail:.,tab:\ \ ,eol:¬ 
   autocmd FileType javascript setlocal softtabstop=2 expandtab sw=2 ts=2 | set list! | set list listchars=trail:.,tab:.>,eol:¬ 
   autocmd BufRead,BufNewFile psql.edit.*  set filetype=sql
